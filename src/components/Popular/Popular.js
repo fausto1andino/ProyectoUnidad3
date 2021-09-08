@@ -42,7 +42,7 @@ const styles = css`
         width: 0;
       }
       .error {
-        font-size: 38px;
+        font-size: 39px;
         color: red;
         height: 32px;
       }
