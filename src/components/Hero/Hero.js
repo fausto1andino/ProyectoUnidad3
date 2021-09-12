@@ -1,5 +1,7 @@
-/** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+
+/** @jsxImportSource @emotion/react */
+
+import { css } from "@emotion/core";
 import HeroNav from "./HeroNav/HeroNav";
 import Output from "../Output/Output";
 import Banner from "../../banner";

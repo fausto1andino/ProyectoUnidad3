@@ -1,6 +1,6 @@
-/** @jsx jsx */
-import { css, jsx } from "@emotion/core";
-import { useContext } from "react";
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/core";
+import { useContext, useState } from "react";
 import { MovieContext } from "../../Context/MovieContext";
 import Container from "../GlobalComponents/Container";
 import movieTrailer from "movie-trailer";
@@ -9,22 +9,47 @@ import YouTube from "react-youtube";
 
 
 const PopularMovies = () => {
-const { popularMovies } = useContext(MovieContext);
+  const { popularMovies } = useContext(MovieContext);
+  const[trailerUrl, setTrailerUrl]= useState(MovieContext);
 
+  const opts = {
+    height:"390",
+    width:"100%",
+    playerVars: {
+     autoplay: 1,
+    },
+ };
+ const handleClick = (popularMovies) =>{
+  if (trailerUrl){
+      setTrailerUrl("");
+  }else{
+      movieTrailer(popularMovies?.name || "")
+      .then(url =>{
+          const urlParams = new URLSearchParams (new URL(url).search);
+          setTrailerUrl(urlParams.get("v"));
+      })
+      .catch((error)=> console.log(error))
+  }
+}
 
   return (
     <div css={styles} className="popularMovies">
+     
       <Container>
         {popularMovies.results &&
           popularMovies.results.map((popularMovieItem, index) => (
             <img
               key={index}
+              onClick={()=> handleClick(popularMovieItem)}
               src={`https://image.tmdb.org/t/p/w400/${popularMovieItem.poster_path}`}
               alt="poster"
             />
           ))}
+          { trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
       </Container>
+      
     </div>
+
     
   );
 };

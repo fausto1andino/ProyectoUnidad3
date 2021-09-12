@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/core";
 import { useContext } from "react";
 import { MovieContext } from "../../../Context/MovieContext";
 
@@ -29,6 +29,7 @@ const styles = css`
   font-weight: 700;
   cursor: pointer;
   user-select: none;
+  
   @media (max-width: 860px) {
     font-size: 40px;
   }

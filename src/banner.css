@@ -37,3 +37,38 @@
         #24035e72
     );
 }
+
+  @media (min-width: 257px) and (max-width: 278px) {
+
+   .banner_description{
+        font-size: 1rem;
+        width:280px;
+
+    }
+
+  }
+  @media (min-width: 279px) and (max-width: 280px) {
+    .banner_description{
+        font-size: 1rem;
+        width:240px;
+    }
+  }
+  
+  @media (min-width: 319px) and (max-width: 499px) {
+    .banner_description{
+        font-size: 1 rem;
+        width:280px;
+    }
+  }
+  @media (max-width: 500px){
+
+  }
+  @media (min-width: 501px) and (max-width: 767px) {
+
+  }
+  @media (min-width: 768px) and (max-width: 1000px) {
+
+  }
+  @media (min-width: 1001px) and (max-width: 1024px) {
+
+  }

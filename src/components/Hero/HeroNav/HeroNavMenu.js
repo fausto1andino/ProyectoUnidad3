@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/core";
 import { useContext } from "react";
 import { MovieContext } from "../../../Context/MovieContext";
 import HeroNavLink from "./HeroNavLink";
@@ -19,7 +19,7 @@ const styles = css`
 position: fixed;
 
   padding-left: 130px;
-  @media (max-width: 860px) {
+  @media (max-width: 1690px) {
     position: fixed;
     top: 0;
     left: 0;

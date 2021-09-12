@@ -1,16 +1,14 @@
-/** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/core";
 
 const HeroNavLogo = () =>{ 
   return(
+   
     <div>
-      <img css={styles2} src="https://cdn-icons-png.flaticon.com/512/705/705062.png" alt="TODOFILMS Logo"/>,
-      <h2 css={styles}> TODOFILMS </h2>,
-      <img css={styles3}
-        src="https://cdn-icons-png.flaticon.com/512/2932/2932802.png" alt="buscar"
-      />
-
+      <img className="Logo"css={styles2} src="https://cdn-icons-png.flaticon.com/512/705/705062.png" alt="TODOFILMS Logo"/>,
+      <h2 className="titulo"css={styles}> TODOFILMS </h2>,
     </div>
+  
   );
 };
 
@@ -22,28 +20,52 @@ const styles = css`
   font-weight: 900;
   user-select: none;
   transform: translateY(-20px);
+  @media (min-width: 257px) and (max-width: 278px) {
+
+    .Logo{
+      transform: translateX(500px);
+    }
+ 
+  }
+   @media (min-width: 279px) and (max-width: 280px) {
+    .Logo{
+      transform: translateX(500px);
+    }
+  }
+
+  @media (min-width: 1127px) {
+    left:200px;
+  }
   
+  @media (max-width: 1126px){
+    right:2000px;
+  }
 
 `;
 const styles2 = css`
  
-    position: fixed;
+   position: fixed;
     left: 20px;
     width:50px;
     margin-left: 130px;
     transform: translateY(-20px);
+
+    @media (min-width: 257px) and (max-width: 278px) {
+        width:1px;
+    }
+     @media (min-width: 279px) and (max-width: 280px) {
+        width:1px;
+    }
+
+   @media (max-width: 907px) {    
+    margin-left:5px;
+    transition: all 800ms ease-in-out;
+  }
+    
   
 
 `;
 
-const styles3 = css`
-    
-    position: fixed;
-    left:1200px;
-    width: 50px;
-    object-fit: contain;
-    transform: translateY(-20px);
-    
-`;
+
 
 export default HeroNavLogo;

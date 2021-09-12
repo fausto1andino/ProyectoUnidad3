@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/core";
 import { useContext } from "react";
 import { MovieContext } from "../../../Context/MovieContext";
 import Container from "../../GlobalComponents/Container";
@@ -13,17 +13,22 @@ const HeroNav = () => {
   return (
     <nav css={styles}>
       <Container>
-        <div className="wrapper">
+        <div class="wrapper">
           <HeroNavLogo />
           <HeroNavMenu />
         </div>
+
+      
         <HeroNavSearch />
+       
+        
         <i
           onClick={() => setHiddenMenu(!hiddenMenu)}
           id="burgerMenu"
           className={hiddenMenu ? "fas fa-bars" : "fas fa-times"}
         ></i>
       </Container>
+    
     </nav>
   );
 };
@@ -52,16 +57,72 @@ const styles = css`
       display: none;
     }
   }
-  @media (max-width: 860px) {
+  @media (min-width: 257px) and (max-width: 278px) {
     .container {
       #burgerMenu {
         display: block;
+        transform: translateX(80px);
       }
     }
   }
-  @media (max-width: 1365px) {
+  @media (min-width: 279px) and (max-width: 280px) {
     .container {
-      max-width: 90%;
+      #burgerMenu {
+        display: block;
+        transform: translateX(85px);
+      }
+    }
+    
+  }
+  
+  @media (min-width: 319px) and (max-width: 499px) {
+    .container {
+      #burgerMenu {
+        display: block;
+        transform: translateX(103px);
+      }
+    }
+  }
+  @media (min-width: 501px) and (max-width: 767px) {
+    .container {
+      #burgerMenu {
+        display: block;
+        transform: translateX(140px);
+      }
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1000px) {
+    .container {
+      #burgerMenu {
+        display: block;
+        transform: translateX(200px);
+      }
+    }
+  }
+  @media (min-width: 1001px) and (max-width: 1024px) {
+    .container {
+      #burgerMenu {
+        display: block;
+        transform: translateX(250px);
+      }
+    }
+  }
+  @media (max-width: 1690px) {
+    .container {
+      #burgerMenu {
+        display: block
+      }
+    }
+  }
+
+  @media (max-width: 1690px) {
+    .container{
+       
+      
+        max-width: 30%;  
+       
+      
+
     }
   }
 `;

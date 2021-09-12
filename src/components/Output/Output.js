@@ -1,11 +1,13 @@
-/** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/core";
 import React, { useContext } from "react";
 import { MovieContext } from "../../Context/MovieContext";
 import Container from "../GlobalComponents/Container";
 import Movies from "../Movies/Movies";
 import MoviesPagination from "../Movies/MoviesPagination";
 import Popular from "../Popular/Popular";
+import Row from "../Popular/Row";
+import requests from "../../requests";
 
 const Output = () => {
   const { activeLink } = useContext(MovieContext);
@@ -22,6 +24,7 @@ const Output = () => {
       )}
       {activeLink === "Popular" && (
         <Container>
+          <Row title="Popular" fetchUrl={requests.fetchTrending}/>   
           <Popular />
         </Container>
       )}

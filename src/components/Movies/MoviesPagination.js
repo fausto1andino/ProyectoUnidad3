@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/core";
 import React, { useContext } from "react";
 import { MovieContext } from "../../Context/MovieContext";
 import Container from "../GlobalComponents/Container";
