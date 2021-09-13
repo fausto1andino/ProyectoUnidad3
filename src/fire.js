@@ -1,9 +1,8 @@
-
-import { initializeApp } from "firebase/app";
-
-
-
-
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 
 var firebaseConfig = {
   apiKey: "AIzaSyAJ9sWL4tqs-ezVdZIaAyseDQgR3AK7FmQ",
@@ -15,6 +14,6 @@ var firebaseConfig = {
   measurementId: "G-5EENJBLXQS"
 };
 
-
-const fire = initializeApp(firebaseConfig);
+/*const db = getFirestore(app);*/
+const fire = firebase.initializeApp(firebaseConfig);
 export default fire;
