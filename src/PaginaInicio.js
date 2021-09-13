@@ -5,7 +5,7 @@ import Hero from "./components/Hero/Hero";
 const PaginaInicio = ({handleLogout}) => {
    return (
         <MovieState>
-        <button className="logoutf"onClick={handleLogout}>Logout</button>
+        <button className="logoutf2"onClick={handleLogout}>Logout</button>
             <Hero>
             </Hero>
         </MovieState>

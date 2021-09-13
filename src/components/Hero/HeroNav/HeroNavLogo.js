@@ -15,11 +15,12 @@ const HeroNavLogo = () =>{
 
 const styles = css`
   position: fixed;
-  font-size: 22px;
+  font-size: 40px;
   color: #a06cd5;
   font-weight: 900;
   user-select: none;
-  transform: translateY(-20px);
+  transform: translateY(-32px);
+  
   @media (min-width: 257px) and (max-width: 278px) {
 
     .Logo{

@@ -13,6 +13,23 @@ body{
       cursor: pointer;
       font-family: 'Roboto', sans-serif;
     }
+    .logoutf2 {
+      border: none;
+      outline: none;
+      width: 100%;
+      padding: 15px 0;
+      color: #fff;
+      font-size: 22px;
+      letter-spacing: 1px;
+      background: radial-gradient(
+        ellipse at left bottom,
+        rgb(60, 27, 90),
+        rgba(85, 44, 160, 0.9)0%,
+        rgba(60, 27, 90) 100%
+      );
+      cursor: pointer;
+      font-family: 'Roboto', sans-serif;
+    }
     .login {
       width: 100%;
       min-height: 100vh;

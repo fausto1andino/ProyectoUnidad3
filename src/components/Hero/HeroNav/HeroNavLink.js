@@ -24,7 +24,7 @@ const styles = css`
   border: none;
   outline: none;
   background: transparent;
-  font-size: 22px;
+  font-size: 35px;
   margin-right: 24px;
   font-weight: 700;
   cursor: pointer;
