@@ -50,4 +50,4 @@ const Login =(props)=>{
         </section>
     )
 }
-export d
+export default Login;

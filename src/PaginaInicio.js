@@ -2,7 +2,7 @@ import React from 'react';
 import './App2.css';
 import { MovieState } from "./Context/MovieContext";
 import Hero from "./components/Hero/Hero";
-const Hero2 = ({handleLogout}) => {
+const PaginaInicio = ({handleLogout}) => {
    return (
         <MovieState>
         <button className="logoutf"onClick={handleLogout}>Logout</button>
@@ -11,4 +11,4 @@ const Hero2 = ({handleLogout}) => {
         </MovieState>
    );
  };
-export default Hero2;
+export default PaginaInicio;

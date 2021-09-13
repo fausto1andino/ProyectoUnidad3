@@ -18,10 +18,9 @@ body{
       min-height: 100vh;
       padding: 0 20px;
       /* background-image: url("https://64.media.tumblr.com/95de14d4613e8497d4140b0664d167f7/tumblr_n29t6wNC9L1rsdpaso1_500.gifv"); */
-      background-image:url("https://media.giphy.com/media/LR5ZBwZHv02lmpVoEU/giphy-downsized-large.gif?cid=790b761156df066087fa6309b7514569054538562d262922&rid=giphy-downsized-large.gif&ct=g");   
-      
-      background-size: cover;
-      /* background-size:50% 100%;  */
+      background-image:url("https://media.giphy.com/media/ITRemFlr5tS39AzQUL/giphy-downsized-large.gif?cid=790b76110fd2f2e8996757c0168b66b63db3460d79404994&rid=giphy-downsized-large.gif&ct=g");   
+      /* background-size: cover; */
+      background-size:100% 100%;  
       background-repeat:no-repeat;
       background-color: #fff;
       display: flex;
@@ -100,3 +99,6 @@ body{
     }
     
     .login .loginContainer .errorMsg {
+      color: red;
+      font-size: 16px;
+    }
